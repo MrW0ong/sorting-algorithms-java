@@ -4,6 +4,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
+// Updated code
 public class Main {
     public static void main(String[] args) throws FileNotFoundException {
         DataLoader loader = new DataLoader();
@@ -12,20 +13,17 @@ public class Main {
         List<Double> redWine = loader.loadData("src/main/resources/winequality-red.csv");
         List<Double> whiteWine = loader.loadData("src/main/resources/winequality-white.csv");
 
-        System.out.println("Red rows: " + redWine.size());
-        System.out.println("White rows: " + whiteWine.size());
-
         // Combine the CSV files
         Set<Double> uniqueValues = new HashSet<>();
         uniqueValues.addAll(redWine);
         uniqueValues.addAll(whiteWine);
-
         List<Double> allWines = new ArrayList<>(uniqueValues);
-        System.out.println("Unique alcohol values across both datasets: " + allWines.size());
 
+
+        System.out.println("Unsorted List: " + allWines);
 
         BubbleSort sorter = new BubbleSort();
-        sorter.sort(allWines);
+        sorter.sort(new ArrayList<>(allWines));
 
     }
 }

@@ -4,7 +4,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-// Updated code
+
 public class Main {
     public static void main(String[] args) throws FileNotFoundException {
         DataLoader loader = new DataLoader();
@@ -22,8 +22,12 @@ public class Main {
 
         System.out.println("Unsorted List: " + allWines);
 
-        BubbleSort sorter = new BubbleSort();
-        sorter.sort(new ArrayList<>(allWines));
+        BubbleSort bubble = new BubbleSort();
+        bubble.sort(new ArrayList<>(allWines));
+        bubble.sortOptimized(new ArrayList<>(allWines));
+
+        QuickSort quickSort = new QuickSort();
+
 
     }
 }

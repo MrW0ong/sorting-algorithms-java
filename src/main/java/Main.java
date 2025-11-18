@@ -26,7 +26,11 @@ public class Main {
         bubble.sort(new ArrayList<>(allWines));
         bubble.sortOptimized(new ArrayList<>(allWines));
 
-        QuickSort quickSort = new QuickSort();
+        QuickSort quick = new QuickSort();
+        quick.sortFirst(new ArrayList<>(allWines));
+        quick.sortLast(new ArrayList<>(allWines));
+        quick.sortRandom(new ArrayList<>(allWines));
+
 
 
     }

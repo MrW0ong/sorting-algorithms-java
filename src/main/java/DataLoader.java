@@ -12,7 +12,7 @@ public class DataLoader {
 
         try (Scanner sc = new Scanner(new File(filePath))) {
 
-            if (sc.hasNextLine()) sc.nextLine(); // skip header
+            if (sc.hasNextLine()) sc.nextLine();
 
             while (sc.hasNextLine()) {
                 String line = sc.nextLine();

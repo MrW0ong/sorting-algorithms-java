@@ -19,19 +19,9 @@ public class Main {
         List<Double> shuffled = new ArrayList<>(allWines);
         Collections.shuffle(shuffled, new Random(42L));
 
-        System.out.println("Original Unsorted List: " + "\n" + allWines);
-        System.out.println("Shuffled Unsorted List: " + "\n" + shuffled);
-
-        // Insertion sort
-        System.out.println("\nUnique alcohol values = " + allWines.size());
-        InsertionSort insertion = new InsertionSort();
-        insertion.sort(new ArrayList<>(allWines));
-
-        System.out.println("\n--- Insertion Sort on original order ---");
-        insertion.sort(new ArrayList<>(allWines));
-        System.out.println("\n--- Insertion Sort on shuffled order ---");
-        insertion.sort(new ArrayList<>(shuffled));
-
+        System.out.println("Original Unsorted List: " + allWines);
+        System.out.println("Shuffled Unsorted List: " + shuffled);
+        System.out.println("Unique alcohol values = " + allWines.size());
 
         // Bubble sort
         BubbleSort bubble = new BubbleSort();
@@ -44,22 +34,12 @@ public class Main {
         System.out.println("\n--- Bubble Sort Optimized on shuffled order ---");
         bubble.sortOptimized(new ArrayList<>(shuffled));
 
-        // Quick sort
-        QuickSort quick = new QuickSort();
-        System.out.println("\n--- Quick Sort with original order ---");
-        System.out.println("\n--- First element as pivot point ---");
-        quick.sortFirst(new ArrayList<>(allWines));
-        System.out.println("\n--- Last element as pivot point ---");
-        quick.sortLast(new ArrayList<>(allWines));
-        System.out.println("\n--- Random element as pivot point ---");
-        quick.sortRandom(new ArrayList<>(allWines));
-        System.out.println("\n--- Quick Sort with shuffled order ---");
-        System.out.println("\n--- First element as pivot point ---");
-        quick.sortFirst(new ArrayList<>(shuffled));
-        System.out.println("\n--- Last element as pivot point ---");
-        quick.sortLast(new ArrayList<>(shuffled));
-        System.out.println("\n--- Random element as pivot point ---");
-        quick.sortRandom(new ArrayList<>(shuffled));
+        // Insertion sort
+        InsertionSort insertion = new InsertionSort();
+        System.out.println("\n--- Insertion Sort on original order ---");
+        insertion.sort(new ArrayList<>(allWines));
+        System.out.println("\n--- Insertion Sort on shuffled order ---");
+        insertion.sort(new ArrayList<>(shuffled));
 
         // Merge sort
         MergeSort merge = new MergeSort();
@@ -67,6 +47,23 @@ public class Main {
         merge.sort(new ArrayList<>(allWines));
         System.out.println("\n--- Merge Sort on shuffled order ---");
         merge.sort(new ArrayList<>(shuffled));
+
+        // Quick sort
+        QuickSort quick = new QuickSort();
+        System.out.println("--- Quick Sort with original order ---");
+        System.out.println("\n--- First element as pivot point ---");
+        quick.sortFirst(new ArrayList<>(allWines));
+        System.out.println("\n--- Last element as pivot point ---");
+        quick.sortLast(new ArrayList<>(allWines));
+        System.out.println("\n--- Random element as pivot point ---");
+        quick.sortRandom(new ArrayList<>(allWines));
+        System.out.println("--- Quick Sort with shuffled order ---");
+        System.out.println("\n--- First element as pivot point ---");
+        quick.sortFirst(new ArrayList<>(shuffled));
+        System.out.println("\n--- Last element as pivot point ---");
+        quick.sortLast(new ArrayList<>(shuffled));
+        System.out.println("\n--- Random element as pivot point ---");
+        quick.sortRandom(new ArrayList<>(shuffled));
 
 
         List<Double> groundTruth = new ArrayList<>(uniqueValues);

@@ -1,3 +1,4 @@
+import java.util.Collections;
 import java.util.List;
 import java.util.Random;
 
@@ -73,23 +74,18 @@ public class QuickSort {
             case RANDOM -> low + random.nextInt(high - low + 1);
         };
 
-
-
         double pivotValue = list.get(pivotIndex);
-
-        swap(list, pivotIndex, high);
+        Collections.swap(list, pivotIndex, high);
 
         int i = low;
         for (int j = low; j < high; j++) {
             comparisons++;
-
             if (list.get(j) <= pivotValue) {
-                swap(list, i, j);
+                Collections.swap(list, i, j);
                 i++;
             }
         }
-
-        swap(list, i, high);
+        Collections.swap(list, i, high);
         return i;
     }
 

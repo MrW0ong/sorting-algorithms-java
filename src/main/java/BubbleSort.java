@@ -5,8 +5,8 @@ public class BubbleSort {
     public void sort(List<Double> list) {
 
 
-        long startTime = System.nanoTime(); // Start timer, we're using nanoTime for the most accurate time results
-        int comparisons = 0; // Comparison counter
+        long startTime = System.nanoTime();
+        int comparisons = 0;
 
         int n = list.size();
         for (int i = 0; i < n - 1; i++) {
@@ -22,7 +22,7 @@ public class BubbleSort {
                 }
             }
         }
-        long endTime = System.nanoTime(); // Stop timer
+        long endTime = System.nanoTime();
 
         long ns = endTime - startTime;
         double ms =  ns / 1000000.0;
@@ -55,7 +55,7 @@ public class BubbleSort {
 
             } if (!swapped)  { break; }
         }
-        long endTime = System.nanoTime(); // Stop timer
+        long endTime = System.nanoTime();
 
         long ns = endTime - startTime;
         double ms =  ns / 1000000.0;
@@ -72,10 +72,3 @@ public class BubbleSort {
 
 
 }
-    /*  Explanation of Bubble Sort Algorithm
-    Bubble Sort is a sorting algorithm where the lower value elements should be on the left side of the array,
-    while the higher value elements should end up on the right side of the array.
-    The algorithm always compares a number with the number on the right side of it.
-    If the number on the left side is higher than the right side, then they swap places. If not, then nothing changes. And the algorithm move on to the next values.
-    This process is repeated until the whole array is sorted in ascending order.
-    */
